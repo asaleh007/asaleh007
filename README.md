@@ -19,4 +19,9 @@ I’m Abdelrahman, a web developer from Cairo with a focus on web security. I’
 [Explore my portfolio ↗](https://asaleh.xyz)
 
 <!-- activity -->
+## GitHub activity
+
+[@asaleh007](https://github.com/asaleh007) · [Repositories](https://github.com/asaleh007?tab=repositories)
+
+![Contribution snake](./assets/contributions.svg)
 <!-- /activity -->
