@@ -19,4 +19,9 @@ I enjoy OSINT challenges that start with a single photograph, forensics puzzles 
 `HTML` · `CSS` · `JavaScript` · `Python` · `C++` · `KiCad` · `Proteus` · `Kali Linux`
 
 <!-- activity -->
+## GitHub activity
+
+[@asaleh007](https://github.com/asaleh007) · [Repositories](https://github.com/asaleh007?tab=repositories)
+
+![Contribution snake](./assets/contributions.svg)
 <!-- /activity -->
