@@ -1,0 +1,55 @@
+name: Update profile activity
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - README.md
+      - .github/workflows/activity.yml
+  schedule:
+    - cron: '15 2 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-activity
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: assets/contributions.svg?palette=github-dark
+      - name: Link activity to the profile owner
+        env:
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          owner = os.environ["OWNER"]
+          readme = Path("README.md")
+          start, end = "<!-- activity -->", "<!-- /activity -->"
+          before, block = readme.read_text().split(start, 1)
+          _, after = block.split(end, 1)
+          activity = f"""
+          ## GitHub activity
+
+          [@{owner}](https://github.com/{owner}) · [Repositories](https://github.com/{owner}?tab=repositories)
+
+          ![Contribution snake](./assets/contributions.svg)
+          """
+          readme.write_text(before + start + "\n" + activity.strip() + "\n" + end + after)
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md assets/contributions.svg
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh contribution activity'
+            git push
+          fi
