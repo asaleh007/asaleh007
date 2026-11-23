@@ -1,6 +1,9 @@
 <img src="./assets/header.svg" width="100%" alt="Abdelrahman Ahmed Saleh — Web Security and Web Development in Cairo">
 
-<p align="center"><img src="./assets/skills.gif" width="420" alt="Web Security, Web Development, JavaScript, Python, C++, OSINT and Cryptography"></p>
+<p align="center"><picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/skills-static.svg">
+  <img src="./assets/skills.gif" width="420" alt="Web Security, Web Development, JavaScript, Python, C++, OSINT and Cryptography">
+</picture></p>
 
 <p align="center"><a href="https://asaleh.xyz"><img src="./assets/website.svg" width="260" alt="Visit my website — asaleh.xyz"></a></p>
 
