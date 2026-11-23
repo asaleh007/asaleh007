@@ -8,6 +8,11 @@
 
 I’m Abdelrahman, a web developer from Cairo with a focus on web security. I’m interested in how websites handle authentication and access control. I also enjoy solving OSINT and cryptography puzzles in CTFs.
 
+## 🏆 Achievements
+
+- 🎮 Built a [pixel-art portfolio](https://asaleh.xyz) with an animated character that walks across the page.
+- 🐍 Automated my [contribution animation](./assets/contributions.svg) with [GitHub Actions](./.github/workflows/activity.yml).
+
 ## What I’m into
 
 <p><img src="./assets/web.svg" width="32%" alt="Web Security. I study how websites handle logins and permissions."> <img src="./assets/osint.svg" width="32%" alt="Location puzzles. I look for landmarks and street clues in photographs."> <img src="./assets/crypto.svg" width="32%" alt="Hidden messages. I enjoy peeling back layers of encoding in CTF puzzles."></p>
